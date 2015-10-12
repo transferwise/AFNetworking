@@ -368,9 +368,9 @@ static void AFNetworkReachabilityReleaseCallback(const void *info) {
         return;
     }
 
-    self.networkReachability = SCNetworkReachabilityCreateWithName(kCFAllocatorDefault, [[self.baseURL host] UTF8String]);
+    _networkReachability = SCNetworkReachabilityCreateWithName(kCFAllocatorDefault, [[self.baseURL host] UTF8String]);
 
-    if (!self.networkReachability) {
+    if (!_networkReachability) {
         return;
     }
 
